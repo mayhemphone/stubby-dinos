@@ -1,1 +1,7 @@
 <h1> index dinos!</h1>
+<h3> List of Dinos</h3>
+<ul>
+	<% myDinos.forEach((dino)=>{ %>
+	<li><%= dino.name %> is a <%= dino.type %></li>
+	<%})%>
+</ul>
