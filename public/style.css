@@ -1,0 +1,45 @@
+
+textarea, select, input, button { 
+	outline: none; 
+}
+body {
+	/*border:1px solid red;*/
+	background-color: #ddd;
+	height:98vh;
+	padding: 0px;
+/*	display:flex;
+	justify-content: center;
+	align-content: center;*/
+}
+div {
+	/*border:1px solid green;*/
+}
+h1 {
+
+}
+p {
+	
+}
+
+ul {
+	margin: 0;
+}
+nav { 
+	margin: 0; 
+	/*border: 1px solid red; */
+	background-color: #333;
+
+}
+nav a {
+	color: white;
+}
+ul {
+	margin: 0;
+}
+nav ul li {
+	display: inline;
+	margin: 1em 1em 1em 0;
+	padding: 0;
+	line-height: 2em;
+}
+nav
