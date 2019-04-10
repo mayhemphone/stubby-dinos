@@ -2,6 +2,10 @@ var express = require('express')
 var layouts = require('express-ejs-layouts')
 
 var app = express()
+var methodOverride = require('method-override')
+
+app.use(methodOverride('_method'))
+
 
 app.set('view engine', 'ejs')
 app.use(layouts)
@@ -16,6 +20,7 @@ app.get('/', (req, res)=> {
 
 
 app.use('/dinosaurs', require('./controllers/dinosaurs'))
+app.use('/cryptids', require('./controllers/cryptids'))
 
 app.use('/', express.static('public'))
 

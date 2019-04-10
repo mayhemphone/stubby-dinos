@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router()
-
+var dinoIndex
 // data stuff
 var fs = require('fs')
 var dinoData = fs.readFileSync('./dinosaurs.json')
@@ -18,15 +18,16 @@ router.get('/new', (req, res) =>{
 
 // create (/create) POST
 router.post('/', (req, res) =>{
-	console.log(req.body)
+	dinoData.push(req.body)
+	fs.writeFileSync('./dinosaurs.json', JSON.stringify(dinoData))
 	res.redirect('/dinosaurs')
 })
 
 // show (/:id) GET
-router.get('/:id', (req, res) =>{
+	router.get('/:id', (req, res) =>{
 	// get an array index from the request 
 	var dinoIndex = parseInt(req.params.id)
-	res.render('dinosaurs/show', { myDino: dinoData[dinoIndex] })
+	res.render('dinosaurs/show', { myDino: dinoData[dinoIndex], dinoIndex: dinoIndex })
 })
 
 // edit (/edit/:id) GET

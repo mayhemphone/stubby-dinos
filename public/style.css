@@ -3,47 +3,64 @@ textarea, select, input, button {
 	outline: none; 
 }
 body {
-	/*border:1px solid red;*/
 	background-color: #ddd;
 	height:98vh;
 	padding: 0px;
 	width:100vw;
-/*	display:flex;
-	justify-content: center;
-	align-content: center;*/
-}
-div {
-	/*border:1px solid green;*/
-}
-h1 {
+	margin: 0;
 
-}
-p {
-	
 }
 
 ul {
 	margin: 0;
 }
+
 nav { 
 	width: 100vw;
 	margin: 0; 
-	/*border: 1px solid red; */
 	background-color: #333;
 
 }
+
 nav a {
 	color: white;
 }
+
 ul {
 	margin: 0;
 }
+
 nav ul li {
 	display: inline;
 	margin: 1em 1em 1em 0;
 	padding: 0;
 	line-height: 2em;
 }
+
 main {
 	padding: 0 0 0 1em;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 98vw;
+	margin:0;
+	
+}
+.cryptid {
+	margin: 1px;
+	width: 20em;
+}
+.cryptid img {
+	max-width: 19em;
+	margin: .2em 0 1em 0;
+}
+
+a {
+	color: #D00;
+}
+
+.showCryptid {
+	max-width: 98vw;
 }

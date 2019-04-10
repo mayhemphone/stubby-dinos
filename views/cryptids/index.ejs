@@ -1,0 +1,18 @@
+<!-- <h1> Check out our Dino Squad</h1> -->
+<h3> List of Cryptids</h3>
+
+<form method="GET" action="/cryptids">
+	<label for="filter-cryptid">Search by name</label>
+	<input id="filter-cryptid" type="text" name="searchParams" value="">
+	<input type="submit" value="Search">
+	<hr />
+</form>
+
+
+
+
+<div class="container">
+	<% myCryptid.forEach((cryptid)=>{ %>
+	<div class="cryptid"><a href="/cryptids/<%= cryptid.id %>"><%= cryptid.cryptid.name %> <img src="<%= cryptid.cryptid.img_url %>"></a></div>
+	<%})%>
+</div>

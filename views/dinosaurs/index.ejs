@@ -1,7 +1,7 @@
-<h1> index dinos!</h1>
+<!-- <h1> Check out our Dino Squad</h1> -->
 <h3> List of Dinos</h3>
 <ul>
-	<% myDinos.forEach((dino)=>{ %>
-	<li><%= dino.name %> is a <%= dino.type %></li>
+	<% myDinos.forEach((dino, index)=>{ %>
+	<li><a href="/dinosaurs/<%= index %>"><%= dino.name %> is a <%= dino.type %></a></li>
 	<%})%>
 </ul>
